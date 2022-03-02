@@ -147,7 +147,7 @@ INSTALLED_APPS = (
 
     'allauth',
     'allauth.account',
-    'allauth.socialaccount',
+#    'allauth.socialaccount',
 #    'allauth.socialaccount.providers.dropbox',
 #    'allauth.socialaccount.providers.facebook',
 #    'allauth.socialaccount.providers.evernote',
@@ -162,7 +162,7 @@ INSTALLED_APPS = (
 #    'allauth.socialaccount.providers.soundcloud',
 #    'allauth.socialaccount.providers.stackexchange',
 #    'allauth.socialaccount.providers.twitch',
-    'allauth.socialaccount.providers.twitter',
+#    'allauth.socialaccount.providers.twitter',
 #    'allauth.socialaccount.providers.vimeo',
 #    'allauth.socialaccount.providers.weibo',
 #    'allauth.socialaccount.providers.xing',
