@@ -35,7 +35,7 @@ def setup_dummy_social_apps(sender, **kwargs):
 
 
 class DemoConfig(AppConfig):
-    name = 'example.demo'
+    name = 'pmwc.demo'
     verbose_name = _('Demo')
 
     def ready(self):
