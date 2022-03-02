@@ -7,7 +7,7 @@ SITE_DOMAIN = 'coderus.openrepos.net'
 SITE_NAME = 'Patchmanager2 Landing'
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'coderus.openrepos.net']
-FORCE_SCRIPT_NAME = '/pm2'
+FORCE_SCRIPT_NAME = '/pmwc'
 SCRIPT_NAME = FORCE_SCRIPT_NAME
 
 DEBUG = True
