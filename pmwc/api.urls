@@ -1,4 +1,4 @@
-from example.demo import views
+from pmwc.demo import views
 
 
 urlpatterns = [

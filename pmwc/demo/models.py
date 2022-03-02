@@ -7,7 +7,7 @@ from django.core.exceptions import ValidationError
 from django.core.files.storage import FileSystemStorage
 import re
 
-from example.demo.filehandler import *
+from pmwc.demo.filehandler import *
 
 
 class OverwriteStorage(FileSystemStorage):

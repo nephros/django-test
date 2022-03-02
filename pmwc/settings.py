@@ -23,7 +23,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',  # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': os.path.join(PROJECT_ROOT, 'example.db'),  # Or path to database file if using sqlite3.
+        'NAME': os.path.join(PROJECT_ROOT, 'pmwc.db'),  # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -97,7 +97,7 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
             os.path.join(BASE_DIR, 'templates', 'bootstrap', 'allauth'),
-            os.path.join(BASE_DIR, 'templates', 'plain', 'example'),
+            os.path.join(BASE_DIR, 'templates', 'plain', 'pmwc'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -112,7 +112,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'example.wsgi.application'
+WSGI_APPLICATION = 'pmwc.wsgi.application'
 
 MIDDLEWARE = (
     'django.middleware.common.CommonMiddleware',
@@ -132,7 +132,7 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend",
 )
 
-ROOT_URLCONF = 'example.urls'
+ROOT_URLCONF = 'pmwc.urls'
 
 
 
@@ -167,7 +167,7 @@ INSTALLED_APPS = (
 #    'allauth.socialaccount.providers.weibo',
 #    'allauth.socialaccount.providers.xing',
 
-    'example.demo',
+    'pmwc.demo',
     'multiselectfield',
     'bootstrap3',
 )
@@ -184,6 +184,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 try:
-    from example.local_settings import *  # noqa
+    from pmwc.local_settings import *  # noqa
 except ImportError:
     pass

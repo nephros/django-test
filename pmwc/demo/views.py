@@ -6,8 +6,8 @@ from django.views.decorators.csrf import csrf_exempt
 
 from datetime import datetime
 
-from example.demo.models import *
-from example.demo.forms import *
+from pmwc.demo.models import *
+from pmwc.demo.forms import *
 
 import random
 import sys
