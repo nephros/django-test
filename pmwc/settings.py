@@ -167,7 +167,7 @@ INSTALLED_APPS = (
 #    'allauth.socialaccount.providers.weibo',
 #    'allauth.socialaccount.providers.xing',
 
-    'pmwc.demo',
+    'pmwc.catalog',
     'multiselectfield',
     'bootstrap3',
 )

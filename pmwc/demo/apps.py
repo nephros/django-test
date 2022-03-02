@@ -34,9 +34,9 @@ def setup_dummy_social_apps(sender, **kwargs):
                 app.sites.add(site)
 
 
-class DemoConfig(AppConfig):
-    name = 'pmwc.demo'
-    verbose_name = _('Demo')
+class CatalogConfig(AppConfig):
+    name = 'pmwc.catalog'
+    verbose_name = _('Catalog')
 
     def ready(self):
         post_migrate.connect(setup_dummy_social_apps, sender=self)

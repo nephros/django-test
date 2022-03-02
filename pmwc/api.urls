@@ -1,4 +1,4 @@
-from pmwc.demo import views
+from pmwc.catalog import views
 
 
 urlpatterns = [
