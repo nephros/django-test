@@ -21,7 +21,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     python3-oauthlib \
     python3-openid \
     python3-sqlparse \
-    python3-tz
+    python3-tz \
+    && pip3 install --no-cache-dir --trusted-host pypy.org --trusted-host files.pythonhosted.org -r requirements.txt \
+    && apt autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 
 ## newer base images may require these:
@@ -36,18 +38,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 #RUN pip install --no-cache-dir --trusted-host pypy.org --trusted-host files.pythonhosted.org -r requirements.txt
 #ENV PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.7:/usr/local/lib/python3.7/dist-packages:/usr/local/lib/python3.7/site-packages
 
-RUN pip3 install --no-cache-dir --trusted-host pypy.org --trusted-host files.pythonhosted.org -r requirements.txt
 COPY . .
-
-RUN apt autoremove
-RUN apt-get clean
-RUN rm -rf /var/lib/apt/lists/*
 
 RUN chown -R www-data:www-data /app
 USER www-data:www-data
-RUN python3 manage.py check
-RUN python3 manage.py makemigrations
-RUN python3 manage.py migrate
 EXPOSE 4000
 EXPOSE 4080
 EXPOSE 4443
